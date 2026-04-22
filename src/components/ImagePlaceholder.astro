@@ -1,0 +1,23 @@
+---
+interface Props {
+  label?: string;
+  ratio?: 'landscape' | 'square' | 'portrait';
+}
+
+const { label = 'Image Placeholder', ratio = 'landscape' } = Astro.props;
+const ratioClass =
+  ratio === 'square'
+    ? 'aspect-square'
+    : ratio === 'portrait'
+      ? 'aspect-[3/4]'
+      : 'aspect-[16/9]';
+---
+
+<div
+  class={`grid ${ratioClass} place-items-center rounded-[var(--radius-card)] border border-dashed border-ink/25 bg-gradient-to-br from-beige/60 via-white to-green/10 p-4 text-center`}
+>
+  <div>
+    <p class="text-sm uppercase tracking-[0.2em] text-ink/60">Photo</p>
+    <p class="mt-1 text-lg text-ink/80">{label}</p>
+  </div>
+</div>

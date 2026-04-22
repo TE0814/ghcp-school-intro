@@ -1,0 +1,25 @@
+---
+import { getDictionary, type Locale } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-ink/10 py-12">
+  <div class="container-shell max-w-5xl space-y-3 text-sm text-ink/70">
+    <p>{t.footer.address}</p>
+    <p>
+      {t.footer.copyright} / {year}
+    </p>
+    <p>
+      {locale === 'ja'
+        ? '本文は公式公開情報を参考にしたサンプルです。実運用前に学校監修を行ってください。'
+        : 'Texts are AI-generated samples based on public information. Review by school staff is required before production use.'}
+    </p>
+  </div>
+</footer>

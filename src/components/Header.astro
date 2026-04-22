@@ -1,0 +1,48 @@
+---
+import LangSwitch from './LangSwitch.astro';
+import { getDictionary, type Locale } from '../utils/i18n';
+import { addBase } from '../utils/links';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const t = getDictionary(locale);
+
+const navItems = [
+  { href: '/', label: t.nav.home },
+  { href: '/about/', label: t.nav.about },
+  { href: '/curriculum/', label: t.nav.curriculum },
+  { href: '/campus/', label: t.nav.campus },
+  { href: '/faculty/', label: t.nav.faculty },
+  { href: '/admissions/', label: t.nav.admissions },
+  { href: '/news/', label: t.nav.news },
+  { href: '/access/', label: t.nav.access },
+  { href: '/contact/', label: t.nav.contact }
+].map((item) => ({
+  ...item,
+  href: locale === 'en' && item.href !== '/' ? `/en${item.href}` : locale === 'en' ? '/en/' : item.href
+}));
+---
+
+<header class="sticky top-0 z-50 border-b border-ink/10 bg-[color:var(--color-bg)]/90 backdrop-blur-md">
+  <div class="container-shell flex flex-wrap items-center justify-between gap-4 py-4">
+    <a href={addBase(locale === 'ja' ? '/' : '/en/')} class="text-lg font-semibold tracking-wide text-ink">
+      {t.siteTitle}
+    </a>
+    <nav aria-label="Global" class="order-3 w-full lg:order-2 lg:w-auto">
+      <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-ink/85">
+        {navItems.map((item) => (
+          <li>
+            <a class="hover:text-green" href={addBase(item.href)}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="order-2 lg:order-3">
+      <LangSwitch locale={locale} path={currentPath} />
+    </div>
+  </div>
+</header>

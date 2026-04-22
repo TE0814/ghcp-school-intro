@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="神山まるごと高専 紹介サイト"
+  description="神山まるごと高専の学校概要、カリキュラム、入試情報をまとめた紹介サイトです。"
+>
+  <section class="container-shell max-w-5xl py-20 md:py-28">
+    <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <FadeIn>
+        <p class="mb-5 text-sm uppercase tracking-[0.22em] text-green">Kamiyama Marugoto College of Technology</p>
+        <h1 class="text-4xl leading-tight md:text-6xl">未来をつくる、山あいのテクノロジースクール</h1>
+        <p class="mt-6 max-w-2xl text-ink/80">
+          神山の自然と地域産業に根ざしながら、テクノロジー・デザイン・起業家精神を横断して学ぶ 5 年一貫の教育を目指すサンプルサイトです。
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button href="/about/" label="学校を知る" />
+          <Button href="/contact/" label="資料請求" variant="secondary" />
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <ImagePlaceholder label="神山の風景と学びのイメージ" ratio="landscape" />
+      </FadeIn>
+    </div>
+  </section>
+
+  <Section
+    title="学校概要"
+    subtitle="地域を舞台に、実社会と接続した学びを設計する高専。ここでは公開情報を参考にしたサンプル文を掲載しています。"
+  >
+    <FadeIn>
+      <div class="rounded-[var(--radius-card)] border border-ink/10 bg-white/80 p-8 shadow-card">
+        <p>
+          神山まるごと高専は、社会課題に向き合う次世代のものづくり人材を育成することを目的にした教育機関です。プロジェクト型学習を軸に、地域や企業との協働を通じて「つくる力」と「伝える力」を鍛えます。
+        </p>
+      </div>
+    </FadeIn>
+  </Section>
+
+  <Section title="特徴" subtitle="3 つの軸で、実践的に学ぶ。" className="pt-0">
+    <div class="grid gap-6 md:grid-cols-3">
+      <FadeIn>
+        <Card title="Technology" body="ソフトウェア、ハードウェア、データ活用を横断しながら課題解決を学びます。" />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Design" body="リサーチと試作を繰り返し、使う人に届く体験設計を重視します。" />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Entrepreneurship" body="構想を価値に変えるためのチーム運営、事業化、発信力を育てます。" />
+      </FadeIn>
+    </div>
+  </Section>
+
+  <Section title="次の一歩" subtitle="詳細ページから、カリキュラムや入試情報をご確認ください。" className="pt-0">
+    <FadeIn>
+      <div class="flex flex-wrap gap-3">
+        <Button href="/curriculum/" label="カリキュラムを見る" />
+        <Button href="/admissions/" label="入試情報を見る" variant="secondary" />
+      </div>
+    </FadeIn>
+  </Section>
+</BaseLayout>

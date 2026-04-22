@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="お問い合わせ | 神山まるごと高専"
+  description="お問い合わせと資料請求フォームのサンプル UI です。"
+>
+  <Section title="お問い合わせ" subtitle="送信先は外部フォームサービスへの接続を想定しています。">
+    <FadeIn>
+      <form
+        class="space-y-5 rounded-[var(--radius-card)] border border-ink/10 bg-white/90 p-8 shadow-card"
+        action="https://example.com/TODO"
+        method="post"
+      >
+        <div>
+          <label for="name" class="block text-sm">お名前</label>
+          <input
+            id="name"
+            name="name"
+            required
+            class="mt-2 w-full rounded-xl border border-ink/20 bg-white px-4 py-3"
+            type="text"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm">メールアドレス</label>
+          <input
+            id="email"
+            name="email"
+            required
+            class="mt-2 w-full rounded-xl border border-ink/20 bg-white px-4 py-3"
+            type="email"
+          />
+        </div>
+        <div>
+          <label for="message" class="block text-sm">お問い合わせ内容</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            class="mt-2 w-full rounded-xl border border-ink/20 bg-white px-4 py-3"
+          ></textarea>
+        </div>
+        <button
+          class="rounded-full bg-green px-6 py-3 text-sm font-semibold tracking-wide text-white hover:bg-[#5e7d50]"
+          type="submit"
+        >
+          送信（接続先 TODO）
+        </button>
+      </form>
+    </FadeIn>
+  </Section>
+</BaseLayout>

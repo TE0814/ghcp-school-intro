@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import FadeIn from '../../components/FadeIn.astro';
+import Button from '../../components/Button.astro';
+---
+
+<BaseLayout
+  locale="en"
+  title="Admissions | Kamiyama School Intro"
+  description="Sample admissions requirements, process, and timeline."
+>
+  <Section title="Admissions Guide (Sample)" subtitle="Please refer to official documents when published.">
+    <FadeIn>
+      <div class="space-y-4 rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-8">
+        <p>Enrollment Capacity: 40 students (tentative)</p>
+        <p>Tracks: General Admission / Recommendation Admission</p>
+        <p>Selection: Document review, assignment submission, interview</p>
+      </div>
+    </FadeIn>
+  </Section>
+
+  <Section title="Timeline (Example)" className="pt-0">
+    <FadeIn>
+      <ol class="space-y-3 rounded-[var(--radius-card)] bg-beige/55 p-8">
+        <li>July: Information sessions</li>
+        <li>September: Application opens</li>
+        <li>November: Selection process</li>
+        <li>December: Result announcement</li>
+      </ol>
+    </FadeIn>
+    <div class="mt-8">
+      <Button href="/en/contact/" label="Ask about admissions" />
+    </div>
+  </Section>
+</BaseLayout>

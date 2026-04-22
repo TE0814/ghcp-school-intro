@@ -1,0 +1,37 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+
+const allNews = await getCollection('news');
+const newsList: CollectionEntry<'news'>[] = allNews
+  .filter((entry: CollectionEntry<'news'>) => entry.data.locale === 'ja')
+  .sort((a: CollectionEntry<'news'>, b: CollectionEntry<'news'>) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  locale="ja"
+  title="ニュース | 神山まるごと高専"
+  description="学校からのお知らせとイベント情報のサンプル一覧です。"
+>
+  <Section title="ニュース・お知らせ" subtitle="Markdown 管理のコンテンツコレクションを利用しています。">
+    <div class="space-y-5">
+      {newsList.map((entry: CollectionEntry<'news'>) => (
+        <FadeIn>
+          <article class="rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-6 shadow-card">
+            <p class="text-xs uppercase tracking-[0.16em] text-green">
+              {entry.data.date.toLocaleDateString('ja-JP', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </p>
+            <h3 class="mt-2 text-2xl">{entry.data.title}</h3>
+            <p class="mt-3 text-ink/80">{entry.data.excerpt}</p>
+          </article>
+        </FadeIn>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

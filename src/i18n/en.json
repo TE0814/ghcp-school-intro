@@ -1,0 +1,25 @@
+{
+  "siteTitle": "Kamiyama Marugoto College of Technology",
+  "tagline": "A mountain-town school for future makers",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "curriculum": "Curriculum",
+    "campus": "Campus",
+    "faculty": "Faculty",
+    "admissions": "Admissions",
+    "news": "News",
+    "access": "Access",
+    "contact": "Contact"
+  },
+  "actions": {
+    "learnMore": "Learn more",
+    "requestInfo": "Request brochure",
+    "viewAllNews": "All news",
+    "applyNow": "View admissions guide"
+  },
+  "footer": {
+    "address": "Kamiyama, Myozai District, Tokushima 771-3310, Japan",
+    "copyright": "Kamiyama School Intro Website (Sample)"
+  }
+}

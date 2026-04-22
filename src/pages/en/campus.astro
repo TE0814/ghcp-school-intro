@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import FadeIn from '../../components/FadeIn.astro';
+import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
+---
+
+<BaseLayout
+  locale="en"
+  title="Campus | Kamiyama School Intro"
+  description="Sample introduction to campus spaces and facilities."
+>
+  <Section title="Campus Spaces" subtitle="Designed for focused learning and open collaboration.">
+    <div class="grid gap-8 md:grid-cols-2">
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="Main Building" />
+          <p class="text-sm text-ink/75">Classrooms, labs, and shared collaboration spaces.</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="Prototyping Lab" />
+          <p class="text-sm text-ink/75">Hands-on making environment with digital fabrication tools.</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="Library and Research Zone" />
+          <p class="text-sm text-ink/75">Spaces for both individual study and team sessions.</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="Community Kitchen" />
+          <p class="text-sm text-ink/75">A venue for local engagement and student events.</p>
+        </div>
+      </FadeIn>
+    </div>
+  </Section>
+</BaseLayout>
