@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" aria-hidden="true">
+  <defs>
+    <g id="petal">
+      <path d="M200 60 C 220 110, 220 150, 200 200 C 180 150, 180 110, 200 60 Z"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="200" cy="90" r="6" fill="currentColor"/>
+    </g>
+    <g id="petal-small">
+      <path d="M200 110 C 212 140, 212 170, 200 200 C 188 170, 188 140, 200 110 Z"
+            fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <g stroke="currentColor" fill="none">
+    <circle cx="200" cy="200" r="190" stroke-width="2"/>
+    <circle cx="200" cy="200" r="160" stroke-width="1"/>
+    <circle cx="200" cy="200" r="120" stroke-width="1"/>
+    <circle cx="200" cy="200" r="80"  stroke-width="1"/>
+    <circle cx="200" cy="200" r="40"  stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="14"  stroke-width="1.5" fill="currentColor"/>
+  </g>
+  <g>
+    <use href="#petal"/>
+    <use href="#petal" transform="rotate(30 200 200)"/>
+    <use href="#petal" transform="rotate(60 200 200)"/>
+    <use href="#petal" transform="rotate(90 200 200)"/>
+    <use href="#petal" transform="rotate(120 200 200)"/>
+    <use href="#petal" transform="rotate(150 200 200)"/>
+    <use href="#petal" transform="rotate(180 200 200)"/>
+    <use href="#petal" transform="rotate(210 200 200)"/>
+    <use href="#petal" transform="rotate(240 200 200)"/>
+    <use href="#petal" transform="rotate(270 200 200)"/>
+    <use href="#petal" transform="rotate(300 200 200)"/>
+    <use href="#petal" transform="rotate(330 200 200)"/>
+  </g>
+  <g opacity="0.8">
+    <use href="#petal-small" transform="rotate(15 200 200)"/>
+    <use href="#petal-small" transform="rotate(45 200 200)"/>
+    <use href="#petal-small" transform="rotate(75 200 200)"/>
+    <use href="#petal-small" transform="rotate(105 200 200)"/>
+    <use href="#petal-small" transform="rotate(135 200 200)"/>
+    <use href="#petal-small" transform="rotate(165 200 200)"/>
+    <use href="#petal-small" transform="rotate(195 200 200)"/>
+    <use href="#petal-small" transform="rotate(225 200 200)"/>
+    <use href="#petal-small" transform="rotate(255 200 200)"/>
+    <use href="#petal-small" transform="rotate(285 200 200)"/>
+    <use href="#petal-small" transform="rotate(315 200 200)"/>
+    <use href="#petal-small" transform="rotate(345 200 200)"/>
+  </g>
+</svg>
