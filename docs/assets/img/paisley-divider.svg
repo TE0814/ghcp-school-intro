@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" role="presentation" aria-hidden="true" preserveAspectRatio="none">
+  <defs>
+    <g id="paisley">
+      <path d="M40 60 C 10 60, 10 20, 40 20 C 70 20, 80 40, 60 55 C 50 62, 38 58, 38 48 C 38 40, 46 36, 52 42"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="40" cy="40" r="3" fill="currentColor"/>
+    </g>
+  </defs>
+  <g>
+    <line x1="0" y1="40" x2="1200" y2="40" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+    <use href="#paisley" x="0"/>
+    <use href="#paisley" x="120"/>
+    <use href="#paisley" x="240"/>
+    <use href="#paisley" x="360"/>
+    <use href="#paisley" x="480"/>
+    <use href="#paisley" x="600"/>
+    <use href="#paisley" x="720"/>
+    <use href="#paisley" x="840"/>
+    <use href="#paisley" x="960"/>
+    <use href="#paisley" x="1080"/>
+  </g>
+</svg>
