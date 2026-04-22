@@ -1,0 +1,38 @@
+---
+import { addBase, removeBase } from '../utils/links';
+
+interface Props {
+  locale: 'ja' | 'en';
+  path: string;
+}
+
+const { locale, path } = Astro.props;
+const normalizedPath = removeBase(path);
+
+const toEnRelative = normalizedPath === '/' ? '/en/' : `/en${normalizedPath}`;
+const toJaRelative = normalizedPath.startsWith('/en/')
+  ? normalizedPath.replace('/en/', '/')
+  : normalizedPath === '/en'
+    ? '/'
+    : normalizedPath;
+
+const toEn = addBase(toEnRelative);
+const toJa = addBase(toJaRelative);
+---
+
+<div class="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white/80 p-1 text-xs tracking-wide">
+  <a
+    href={toJa}
+    class={`rounded-full px-3 py-1.5 ${locale === 'ja' ? 'bg-green text-white' : 'text-ink/70 hover:text-ink'}`}
+    aria-label="Switch language to Japanese"
+  >
+    JA
+  </a>
+  <a
+    href={toEn}
+    class={`rounded-full px-3 py-1.5 ${locale === 'en' ? 'bg-green text-white' : 'text-ink/70 hover:text-ink'}`}
+    aria-label="Switch language to English"
+  >
+    EN
+  </a>
+</div>

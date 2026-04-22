@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="入試情報 | 神山まるごと高専"
+  description="募集要項、選考プロセス、出願スケジュールのサンプル情報です。"
+>
+  <Section title="募集要項（サンプル）" subtitle="詳細は公開時の公式資料をご確認ください。">
+    <FadeIn>
+      <div class="space-y-4 rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-8">
+        <p>募集人数: 40名（予定）</p>
+        <p>出願区分: 一般選抜 / 推薦選抜</p>
+        <p>選考方法: 書類審査、課題提出、面接</p>
+      </div>
+    </FadeIn>
+  </Section>
+
+  <Section title="スケジュール（例）" className="pt-0">
+    <FadeIn>
+      <ol class="space-y-3 rounded-[var(--radius-card)] bg-beige/55 p-8">
+        <li>7月: 学校説明会</li>
+        <li>9月: 出願受付開始</li>
+        <li>11月: 選考実施</li>
+        <li>12月: 合格発表</li>
+      </ol>
+    </FadeIn>
+    <div class="mt-8">
+      <Button href="/contact/" label="募集要項の問い合わせ" />
+    </div>
+  </Section>
+</BaseLayout>

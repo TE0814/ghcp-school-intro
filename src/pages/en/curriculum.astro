@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import FadeIn from '../../components/FadeIn.astro';
+import Card from '../../components/Card.astro';
+---
+
+<BaseLayout
+  locale="en"
+  title="Curriculum | Kamiyama School Intro"
+  description="Sample curriculum structure across grade levels and three learning pillars."
+>
+  <Section
+    title="Three Pillars"
+    subtitle="Technology, Design, and Entrepreneurship are taught as one integrated practice."
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      <FadeIn>
+        <Card title="Technology" body="Software, data, and hardware development fundamentals with real project contexts." />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Design" body="User research, information architecture, and iterative prototyping methods." />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Entrepreneurship" body="Opportunity discovery, testing assumptions, and planning implementation." />
+      </FadeIn>
+    </div>
+  </Section>
+
+  <Section title="Year-by-Year Learning (Sample)" className="pt-0">
+    <FadeIn>
+      <div class="overflow-x-auto rounded-[var(--radius-card)] border border-ink/10 bg-white/80">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-beige/60">
+            <tr>
+              <th class="px-4 py-3">Year</th>
+              <th class="px-4 py-3">Focus</th>
+              <th class="px-4 py-3">Sample Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">1-2</td>
+              <td class="px-4 py-3">Core skills and inquiry practice</td>
+              <td class="px-4 py-3">Small apps, research reports</td>
+            </tr>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">3-4</td>
+              <td class="px-4 py-3">Industry and community projects</td>
+              <td class="px-4 py-3">Regional prototypes, validation studies</td>
+            </tr>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">5</td>
+              <td class="px-4 py-3">Graduation project and venture concept</td>
+              <td class="px-4 py-3">Product showcase and final pitch</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </FadeIn>
+  </Section>
+</BaseLayout>

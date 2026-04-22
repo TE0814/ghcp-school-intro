@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import FadeIn from '../../components/FadeIn.astro';
+---
+
+<BaseLayout
+  locale="en"
+  title="Faculty | Kamiyama School Intro"
+  description="Sample faculty and staff cards."
+>
+  <Section title="Faculty and Staff" subtitle="A diverse team supports students from idea to implementation.">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        ['Reiko Inoue', 'Design', 'Leads service design and studio-based learning.'],
+        ['Naoto Takahashi', 'Technology', 'Teaches software engineering and data applications.'],
+        ['Yo Saeki', 'Entrepreneurship', 'Supports venture thinking and team execution.'],
+        ['Makoto Yamaguchi', 'Mathematics', 'Covers applied mathematics and modeling.'],
+        ['Haruka Nakagawa', 'Student Support', 'Guides learning and career development.'],
+        ['Ren Yoshida', 'Regional Partnerships', 'Coordinates projects with local stakeholders.']
+      ].map(([name, role, text]) => (
+        <FadeIn>
+          <article class="rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-6 shadow-card">
+            <p class="text-xs uppercase tracking-[0.16em] text-green">{role}</p>
+            <h3 class="mt-2 text-2xl">{name}</h3>
+            <p class="mt-3 text-sm text-ink/80">{text}</p>
+          </article>
+        </FadeIn>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

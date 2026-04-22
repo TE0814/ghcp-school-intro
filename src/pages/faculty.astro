@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="教員・スタッフ | 神山まるごと高専"
+  description="教員・スタッフ構成のサンプル情報です。"
+>
+  <Section title="教員・スタッフ" subtitle="多様な実務経験を持つメンバーが学びを伴走します。">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        ['井上 玲子', 'デザイン', 'サービスデザインと教育実践を担当。'],
+        ['高橋 直人', 'テクノロジー', 'ソフトウェア開発とデータ活用を担当。'],
+        ['佐伯 陽', '起業家教育', '事業構想・チーム運営の授業を担当。'],
+        ['山口 真', '数学・基礎科目', '応用数学とモデル化思考を担当。'],
+        ['中川 遥', '学生支援', 'キャリア形成と学習支援を担当。'],
+        ['吉田 蓮', '地域連携', '自治体・企業連携プロジェクトを担当。']
+      ].map(([name, role, text]) => (
+        <FadeIn>
+          <article class="rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-6 shadow-card">
+            <p class="text-xs uppercase tracking-[0.16em] text-green">{role}</p>
+            <h3 class="mt-2 text-2xl">{name}</h3>
+            <p class="mt-3 text-sm text-ink/80">{text}</p>
+          </article>
+        </FadeIn>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

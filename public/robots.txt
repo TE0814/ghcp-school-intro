@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://te0814.github.io/ghcp-school-intro/sitemap-index.xml

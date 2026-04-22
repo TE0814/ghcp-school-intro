@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  id?: string;
+  className?: string;
+}
+
+const { title, subtitle, id, className = '' } = Astro.props;
+---
+
+<section id={id} class={`py-20 md:py-24 ${className}`}>
+  <div class="container-shell max-w-5xl">
+    <header class="mb-12">
+      <p class="mb-3 text-sm uppercase tracking-[0.24em] text-green">Kamiyama</p>
+      <h2 class="text-3xl md:text-4xl">{title}</h2>
+      {subtitle && <p class="mt-4 max-w-3xl text-ink/75">{subtitle}</p>}
+    </header>
+    <slot />
+  </div>
+</section>

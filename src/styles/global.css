@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #fafaf7;
+  --color-ink: #2b2a26;
+  --accent-green: #6b8e5a;
+  --accent-wood: #c9a87b;
+  --accent-beige: #e8dfcb;
+  --radius-card: 1.5rem;
+  --content-width: 72rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at 12% 12%, rgba(201, 168, 123, 0.18), transparent 30%),
+    radial-gradient(circle at 92% 4%, rgba(107, 142, 90, 0.18), transparent 30%),
+    var(--color-bg);
+  color: var(--color-ink);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  letter-spacing: 0.01em;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Source Serif 4', 'Noto Serif JP', serif;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+a {
+  transition: color 220ms ease;
+}
+
+.container-shell {
+  width: min(100% - 2.5rem, var(--content-width));
+  margin-inline: auto;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: radial-gradient(#2b2a26 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+  z-index: -1;
+}
+
+.page-intro {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: pageReveal 600ms ease-out forwards;
+}
+
+@keyframes pageReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

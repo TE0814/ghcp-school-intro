@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="学校概要 | 神山まるごと高専"
+  description="神山まるごと高専のミッション、ビジョン、沿革のサンプル紹介です。"
+>
+  <Section
+    title="ミッション"
+    subtitle="未来を予測するのではなく、未来を試作する人を育てる。"
+  >
+    <FadeIn>
+      <div class="space-y-4 rounded-[var(--radius-card)] border border-ink/10 bg-white/80 p-8 shadow-card">
+        <p>
+          神山まるごと高専は、テクノロジー・デザイン・起業家精神の交点で、社会に実装できる学びを提供することを目指します。
+        </p>
+        <p>
+          教室の中だけで完結しない教育を重視し、地域、企業、行政と連携したプロジェクトに取り組みます。
+        </p>
+      </div>
+    </FadeIn>
+  </Section>
+
+  <Section title="ビジョン" className="pt-0">
+    <div class="grid gap-6 md:grid-cols-3">
+      <FadeIn>
+        <div class="rounded-[var(--radius-card)] bg-beige/65 p-6">課題発見から実装まで自走できる人材</div>
+      </FadeIn>
+      <FadeIn>
+        <div class="rounded-[var(--radius-card)] bg-green/15 p-6">多様な専門性を横断するチームワーク</div>
+      </FadeIn>
+      <FadeIn>
+        <div class="rounded-[var(--radius-card)] bg-wood/25 p-6">地域と世界をつなぐ実践的アウトプット</div>
+      </FadeIn>
+    </div>
+  </Section>
+
+  <Section title="沿革（サンプル）" className="pt-0">
+    <FadeIn>
+      <ol class="space-y-4 rounded-[var(--radius-card)] border border-ink/10 bg-white/75 p-8">
+        <li>2023年: 開学構想を公開し、教育方針を発表</li>
+        <li>2024年: 地域連携プロジェクトの試行開始</li>
+        <li>2025年: キャンパス整備・カリキュラム設計を本格化</li>
+        <li>2026年: 初年度プログラムの実装準備を推進</li>
+      </ol>
+    </FadeIn>
+  </Section>
+</BaseLayout>

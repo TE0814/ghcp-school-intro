@@ -1,0 +1,25 @@
+{
+  "siteTitle": "神山まるごと高専",
+  "tagline": "未来をつくる、山あいのテクノロジースクール",
+  "nav": {
+    "home": "ホーム",
+    "about": "学校概要",
+    "curriculum": "カリキュラム",
+    "campus": "キャンパス",
+    "faculty": "教員",
+    "admissions": "入試情報",
+    "news": "ニュース",
+    "access": "アクセス",
+    "contact": "お問い合わせ"
+  },
+  "actions": {
+    "learnMore": "詳しく見る",
+    "requestInfo": "資料を請求する",
+    "viewAllNews": "ニュース一覧へ",
+    "applyNow": "募集要項を見る"
+  },
+  "footer": {
+    "address": "〒771-3310 徳島県名西郡神山町神領字西上角",
+    "copyright": "神山まるごと高専 紹介サイト（サンプル）"
+  }
+}

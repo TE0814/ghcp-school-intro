@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import FadeIn from '../../components/FadeIn.astro';
+import Card from '../../components/Card.astro';
+import Button from '../../components/Button.astro';
+import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
+---
+
+<BaseLayout
+  locale="en"
+  title="Kamiyama School Intro"
+  description="A bilingual intro site for Kamiyama Marugoto College of Technology."
+>
+  <section class="container-shell max-w-5xl py-20 md:py-28">
+    <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <FadeIn>
+        <p class="mb-5 text-sm uppercase tracking-[0.22em] text-green">Kamiyama Marugoto College of Technology</p>
+        <h1 class="text-4xl leading-tight md:text-6xl">A mountain-town school for future makers</h1>
+        <p class="mt-6 max-w-2xl text-ink/80">
+          This sample website introduces a five-year education model where technology, design, and
+          entrepreneurship are integrated through real projects in Kamiyama.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button href="/en/about/" label="Discover the school" />
+          <Button href="/en/contact/" label="Request information" variant="secondary" />
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <ImagePlaceholder label="Landscape and student life" ratio="landscape" />
+      </FadeIn>
+    </div>
+  </section>
+
+  <Section
+    title="School Overview"
+    subtitle="This page contains AI-generated sample text inspired by publicly available information."
+  >
+    <FadeIn>
+      <div class="rounded-[var(--radius-card)] border border-ink/10 bg-white/80 p-8 shadow-card">
+        <p>
+          Kamiyama Marugoto College of Technology focuses on cultivating makers who can identify
+          challenges, build prototypes, and communicate outcomes in collaboration with local and global
+          communities.
+        </p>
+      </div>
+    </FadeIn>
+  </Section>
+
+  <Section title="Highlights" subtitle="Three pillars of learning." className="pt-0">
+    <div class="grid gap-6 md:grid-cols-3">
+      <FadeIn>
+        <Card title="Technology" body="Build practical engineering and software skills through project-based learning." />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Design" body="Shape meaningful user experiences through research, prototyping, and iteration." />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Entrepreneurship" body="Turn ideas into social and business value through teamwork and communication." />
+      </FadeIn>
+    </div>
+  </Section>
+
+  <Section title="Next Steps" subtitle="Explore curriculum and admissions for more details." className="pt-0">
+    <FadeIn>
+      <div class="flex flex-wrap gap-3">
+        <Button href="/en/curriculum/" label="View curriculum" />
+        <Button href="/en/admissions/" label="View admissions" variant="secondary" />
+      </div>
+    </FadeIn>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+import Card from '../components/Card.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="カリキュラム | 神山まるごと高専"
+  description="学年別の学びと、テクノロジー・デザイン・起業家精神の3軸を紹介します。"
+>
+  <Section
+    title="教育の3軸"
+    subtitle="Technology、Design、Entrepreneurship を往復しながら実践力を育てます。"
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      <FadeIn>
+        <Card title="Technology" body="プログラミング、データ、IoT、AI などを活用した開発力を養います。" />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Design" body="ユーザー理解、情報設計、ビジュアル設計を通じて価値を形にします。" />
+      </FadeIn>
+      <FadeIn>
+        <Card title="Entrepreneurship" body="課題設定、仮説検証、事業設計を学び、実装につなげます。" />
+      </FadeIn>
+    </div>
+  </Section>
+
+  <Section title="学年別の学び（サンプル）" className="pt-0">
+    <FadeIn>
+      <div class="overflow-x-auto rounded-[var(--radius-card)] border border-ink/10 bg-white/80">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-beige/60">
+            <tr>
+              <th class="px-4 py-3">学年</th>
+              <th class="px-4 py-3">学習テーマ</th>
+              <th class="px-4 py-3">アウトプット例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">1-2年</td>
+              <td class="px-4 py-3">基礎技能・探究の型</td>
+              <td class="px-4 py-3">小規模アプリ、リサーチレポート</td>
+            </tr>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">3-4年</td>
+              <td class="px-4 py-3">実社会連携プロジェクト</td>
+              <td class="px-4 py-3">地域課題プロトタイプ、検証実験</td>
+            </tr>
+            <tr class="border-t border-ink/10">
+              <td class="px-4 py-3">5年</td>
+              <td class="px-4 py-3">卒業制作・事業構想</td>
+              <td class="px-4 py-3">プロダクト発表、事業計画プレゼン</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </FadeIn>
+  </Section>
+</BaseLayout>

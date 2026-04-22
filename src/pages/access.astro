@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="アクセス | 神山まるごと高専"
+  description="所在地と交通アクセスのサンプル情報です。"
+>
+  <Section title="アクセス" subtitle="徳島県神山町を拠点に、全国から学びが集まる環境を目指します。">
+    <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <FadeIn>
+        <div class="rounded-[var(--radius-card)] border border-ink/10 bg-white/85 p-8">
+          <p class="text-sm uppercase tracking-[0.16em] text-green">Address</p>
+          <p class="mt-3">〒771-3310 徳島県名西郡神山町神領字西上角</p>
+          <p class="mt-4 text-sm text-ink/75">最寄りバス停から徒歩圏内。徳島市内からのアクセスも可能です。</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="overflow-hidden rounded-[var(--radius-card)] border border-ink/10 bg-white">
+          <iframe
+            title="Kamiyama map"
+            class="h-[360px] w-full"
+            loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=134.25%2C33.95%2C134.45%2C34.10&layer=mapnik&marker=34.03%2C134.33"
+          ></iframe>
+        </div>
+      </FadeIn>
+    </div>
+  </Section>
+</BaseLayout>

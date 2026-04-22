@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<article class="rounded-[var(--radius-card)] border border-ink/10 bg-white/80 p-6 shadow-card backdrop-blur-sm">
+  <h3 class="mb-3 text-2xl font-semibold text-ink">{title}</h3>
+  <p class="text-ink/80">{body}</p>
+</article>

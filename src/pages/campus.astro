@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import FadeIn from '../components/FadeIn.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+---
+
+<BaseLayout
+  locale="ja"
+  title="キャンパス | 神山まるごと高専"
+  description="キャンパス環境と主要施設のサンプル紹介です。"
+>
+  <Section title="キャンパス紹介" subtitle="学びと暮らしがゆるやかにつながる空間設計。">
+    <div class="grid gap-8 md:grid-cols-2">
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="メイン棟 外観" />
+          <p class="text-sm text-ink/75">教室、ラボ、共創スペースを備えた学習拠点。</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="プロトタイピングラボ" />
+          <p class="text-sm text-ink/75">デジタル工作機器と実験設備を使った制作環境。</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="図書・リサーチエリア" />
+          <p class="text-sm text-ink/75">静かな個人学習からチーム議論まで対応。</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div class="space-y-3">
+          <ImagePlaceholder label="コミュニティキッチン" />
+          <p class="text-sm text-ink/75">地域交流イベントや学外連携の場として活用。</p>
+        </div>
+      </FadeIn>
+    </div>
+  </Section>
+</BaseLayout>
